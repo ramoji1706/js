@@ -1,10 +1,5 @@
 //Loops: 
 
-//5.Write a loop that prints numbers from 1 to 10 but skips the number 5 using the continue statement. Stop the loop entirely when the number reaches 8 using 
-
-//the break statement. 
-
-
 //1.FizzBuzz Problem: 
 
 //Write a for loop that prints numbers from 1 to 100. But for multiples of 3, print "Fizz" instead of the number, and for multiples of 5, print "Buzz". 
@@ -71,3 +66,22 @@ newString.forEach(element => {
 });
 
 console.log(count);
+
+//5.Write a loop that prints numbers from 1 to 10 but skips the number 5 using the continue statement. Stop the loop entirely when the number reaches 8 using 
+
+//the break statement. 
+
+for (let index = 1; index <= 10; index++) {
+    if (index == 5) {
+        continue
+        
+    } 
+    else if(index == 8){
+        break
+    }
+    else {
+        console.log(index);
+        
+    }
+    
+}
