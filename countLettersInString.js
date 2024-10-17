@@ -11,13 +11,12 @@ let dict = {}
 
 for (let element of m) {
     if (dict[element]) {
-        dict[element]++
+        dict[element]+=1
     }
     else{
      dict[element] =1
     }  
     
 }
-
 
 console.log(dict);
