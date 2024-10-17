@@ -43,11 +43,11 @@ for (let index = 0; index < modifiedArray.length; index++) {
         if(modifiedArray[index][0] % 2 ==1 && modifiedArray[index][modifiedArray[index].length-1]%2==1 ||modifiedArray[index][0] % 2 ==0 && modifiedArray[index][modifiedArray[index].length-1]%2==0){
             newArray.push(parseInt(modifiedArray[index]))
             
-            
+
         }
         else{
-            let add = parseInt(modifiedArray[index][0]) + parseInt(modifiedArray[index][modifiedArray[index].length-1])
-            let rem = modifiedArray[index].slice(1,modifiedArray[index].length-1)
+            let add = parseInt(modifiedArray[index][0]) + parseInt(modifiedArray[index].slice(-1))
+            let rem = modifiedArray[index].slice(1,-1)
             
            newArray.push(parseInt(add+rem));
         }
