@@ -17,10 +17,15 @@ let newArray = []
 let modifiedArray = array.toString().split(',')
 
 for (let index = 0; index < modifiedArray.length; index++) {
+    
+    //For one digit consecutives one is even and one is odd then we can add those numbers other wise the first number will be same
+    
+     if (modifiedArray[index].length == 1 && modifiedArray[index+1].length >1) {
+        newArray.push(parseInt(modifiedArray[index]))
+    }
 
-    //one digit
-    if (modifiedArray[index].length == 1 ) {
-        if ((modifiedArray[index] % 2 == 1 && modifiedArray[index+1] %2==1) || (modifiedArray[index] % 2 == 0 && modifiedArray[index+1] %2==0)) {
+    else if (modifiedArray[index].length == 1 ) {
+        if ((modifiedArray[index] % 2  == modifiedArray[index+1] %2)) {
             newArray.push(parseInt(modifiedArray[index]))
         }
         else{
@@ -28,9 +33,9 @@ for (let index = 0; index < modifiedArray.length; index++) {
         }
     }
     
-    //two digits
+    //For two digits in that one is even and one is odd the we can add otherwise same number will return
     if(modifiedArray[index].length == 2){
-        if ((modifiedArray[index][0] % 2 == 0 && modifiedArray[index][1] % 2 == 0 || (modifiedArray[index][0] %2 ==1 && modifiedArray[index][1] %2 ==1))) {
+        if ((modifiedArray[index][0] % 2 == modifiedArray[index][1] % 2)) {
             newArray.push(parseInt(modifiedArray[index]))
         }
         else{
@@ -38,12 +43,11 @@ for (let index = 0; index < modifiedArray.length; index++) {
         } 
     }
     
-    //3 or more digits
+    //For 3 or more digits the first and last digits have one is even and one is odd then we can add those numbers and remain number will append to it. 
     if (modifiedArray[index].length >= 3) {
-        if(modifiedArray[index][0] % 2 ==1 && modifiedArray[index][modifiedArray[index].length-1]%2==1 ||modifiedArray[index][0] % 2 ==0 && modifiedArray[index][modifiedArray[index].length-1]%2==0){
+        if(modifiedArray[index][0] % 2 == modifiedArray[index][modifiedArray[index].length-1]%2){
             newArray.push(parseInt(modifiedArray[index]))
             
-
         }
         else{
             let add = parseInt(modifiedArray[index][0]) + parseInt(modifiedArray[index].slice(-1))
@@ -51,12 +55,8 @@ for (let index = 0; index < modifiedArray.length; index++) {
             
            newArray.push(parseInt(add+rem));
         }
-        
-        
+            
+}
     
 }
-
-    
-}
-
 console.log(newArray);

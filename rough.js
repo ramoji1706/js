@@ -1,5 +1,6 @@
-let s = [6741]
-let modifiedArray = s.toString()
-let add = parseInt(modifiedArray[0]) + parseInt(modifiedArray[modifiedArray.length-1])
+let array = [2,2,6]
 
-console.log(add)
+for (let index = 0; index < array.length; index++) {
+    
+    
+}
