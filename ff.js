@@ -16,15 +16,14 @@ let newArray = []
 
 let modifiedArray = array.toString().split(',')
 
-for (let index = 0; index < modifiedArray.length; index++) {
+for (let index = 0; index < modifiedArray.length; index++) {    
+    //if the array has one digit consecutives one is even and one is odd then we can add those numbers other wise the first number will be same
     
-    //For one digit consecutives one is even and one is odd then we can add those numbers other wise the first number will be same
-    
-     if (modifiedArray[index].length == 1 && modifiedArray[index+1].length >1) {
+    if (modifiedArray[index].length == 1 && modifiedArray[index+1].length >1) {
         newArray.push(parseInt(modifiedArray[index]))
     }
 
-    else if (modifiedArray[index].length == 1 ) {
+    else if (modifiedArray[index].length == 1 && modifiedArray[index+1].length ==1) {
         if ((modifiedArray[index] % 2  == modifiedArray[index+1] %2)) {
             newArray.push(parseInt(modifiedArray[index]))
         }
@@ -33,7 +32,7 @@ for (let index = 0; index < modifiedArray.length; index++) {
         }
     }
     
-    //For two digits in that one is even and one is odd the we can add otherwise same number will return
+    //if the array has two digits in that one is even and one is odd the we can add otherwise same number will return
     if(modifiedArray[index].length == 2){
         if ((modifiedArray[index][0] % 2 == modifiedArray[index][1] % 2)) {
             newArray.push(parseInt(modifiedArray[index]))
@@ -43,7 +42,7 @@ for (let index = 0; index < modifiedArray.length; index++) {
         } 
     }
     
-    //For 3 or more digits the first and last digits have one is even and one is odd then we can add those numbers and remain number will append to it. 
+    //if the array has 3 or more digits the first and last digits have one is even and one is odd then we can add those numbers and remain number will append to it. 
     if (modifiedArray[index].length >= 3) {
         if(modifiedArray[index][0] % 2 == modifiedArray[index][modifiedArray[index].length-1]%2){
             newArray.push(parseInt(modifiedArray[index]))

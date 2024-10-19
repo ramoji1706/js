@@ -14,7 +14,7 @@ let s9 = 0
 for (let index = 1; index < 50; index++) {
     
     index.toString().split('').map((element,i) =>{
-        if (element == 0)    {s0+=1}
+             if(element == 0){s0+=1}
         else if(element == 1){s1+=1}
         else if(element == 2){s2+=2}
         else if(element == 3){s3+=3}

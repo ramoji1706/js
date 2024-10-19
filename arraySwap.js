@@ -21,10 +21,8 @@ array.forEach(element => {
             newElement+="0"
         }
         else if (newElement.length ==2) {
-            let arr = newElement.split("")
-            let rev = arr.reverse()
-            let newreversestring = rev.join("")
-            newElement = newreversestring
+            let arr = newElement.split("").reverse().join('')
+            newElement = arr
         }
         else{
             let lastChar = newElement.slice(-1)

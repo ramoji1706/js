@@ -24,6 +24,6 @@ array.map((each,i)=>{
                 odd+=1
             }
         })
-    newArray.push((odd.toString()+even.toString()))
+    newArray.push(parseInt(odd.toString()+even.toString()))
 })
 console.log(newArray);
